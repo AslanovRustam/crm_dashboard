@@ -1,0 +1,36 @@
+.label {
+  display: inline-flex;
+  padding: 4px 14px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 28px;
+  /* background: #dcfce7; */
+  font-family: Plus Jakarta Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 143%;
+}
+
+.active {
+  color: #15803d;
+  background: #dcfce7;
+}
+.notActive {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+.pending {
+  color: #c2410c;
+  background: #ffedd5;
+}
+.suspended {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
