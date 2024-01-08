@@ -1,0 +1,15 @@
+.container {
+  width: 16.67em;
+  background: var(--blackBg);
+  color: var(--milk);
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  width: 8.47em;
+  height: 1.67em;
+}
+/* .logoContainer {
+  width: 8.47em;
+  margin: 0 auto;
+} */

@@ -1,0 +1,70 @@
+.main {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title {
+  position: relative;
+  letter-spacing: 0.5em;
+  font-size: 4em;
+  text-transform: capitalize;
+}
+.title::after,
+.title::before {
+  content: attr(data-text);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+.title::before {
+  animation: glitch 2s both infinite;
+  color: var(--green);
+  z-index: -1;
+}
+.title::after {
+  animation: glitch 2s reverse both infinite;
+  color: var(--red);
+  z-index: -2;
+}
+.btn {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  text-transform: uppercase;
+  color: var(--milk);
+  background-color: var(--blackBg);
+  border: 0.1em solid var(--blackBg);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover,
+.btn:focus {
+  color: var(--blackBg);
+  background-color: var(--light-green);
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-0.015em, 0.015em);
+  }
+  40% {
+    transform: translate(-0.015em, -0.015em);
+  }
+  60% {
+    transform: translate(0.015em, 0.015em);
+  }
+  80% {
+    transform: translate(0.015em, -0.015em);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
