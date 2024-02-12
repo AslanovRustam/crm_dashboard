@@ -1,5 +1,5 @@
 import Link from "next/link";
-import StatusLabel, { Status } from "./components/statusLabel/StatusLabel";
+// import StatusLabel, { Status } from "./components/statusLabel/StatusLabel";
 import s from "./homepage.module.css";
 
 export default function Home() {

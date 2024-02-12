@@ -1,3 +1,7 @@
 .main {
+  display: flex;
   background: var(--milk);
+}
+.children {
+  margin-left: 16.67em;
 }
