@@ -8,7 +8,7 @@ import BriefcaseIcon from "../../../public/briefcase.svg";
 import s from "./navlinks.module.css";
 
 interface NavlinksProps {
-  params: string;
+  // params: string;
 }
 
 const Navlinks: FC<NavlinksProps> = () => {
@@ -17,7 +17,7 @@ const Navlinks: FC<NavlinksProps> = () => {
 
   return (
     <>
-      <Link href="/dashboard" className={s.logoContainer}>
+      <Link href="/" className={s.logoContainer}>
         <Logo className={s.logo} />
       </Link>
       <nav className={s.list}>
