@@ -1,3 +1,4 @@
+import SalesComponent from "@/components/Sales/SalesComponent";
 import StatsList from "@/components/Stats/StatsList";
 import Title from "@/components/Title/Title";
 import React from "react";
@@ -9,6 +10,9 @@ const Dashboards = ({}: IDashboardsProps) => {
     <div>
       <Title text="Dashboards" />
       <StatsList />
+      <div>
+        <SalesComponent/>
+      </div>
     </div>
   );
 };
