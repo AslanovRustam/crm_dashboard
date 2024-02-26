@@ -13,8 +13,8 @@ const StatsList: FC<StatsListProps> = () => {
   ];
   return (
     <ul className={s.list}>
-      {stats.map((item) => (
-        <StatsItem item={item} key={item.id} />
+      {stats.map((item, index) => (
+        <StatsItem item={item} key={item.id} index={index} />
       ))}
     </ul>
   );

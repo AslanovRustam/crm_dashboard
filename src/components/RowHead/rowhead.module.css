@@ -1,0 +1,43 @@
+.head {
+  display: flex;
+  align-items: center;
+  border: 0.1em solid rgb(209, 213, 219);
+}
+.first,
+.second,
+.third {
+  padding: 0.5em 1.75em;
+  font-size: 0.833em;
+  font-weight: 400;
+  line-height: 1.33em;
+  text-align: center;
+}
+.first {
+  width: 50%;
+  color: var(--white);
+  background-color: var(--blackBg);
+}
+.second {
+  width: 25%;
+  color: var(--blackBg);
+  background-color: var(--purple);
+}
+.third {
+  width: 25%;
+  color: var(--blackBg);
+  background-color: var(--light-green);
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  color: var(--blackBg);
+  background-color: inherit;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.4em;
+}
+.head:nth-child(odd) {
+  background: var(--greySecond);
+}

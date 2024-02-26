@@ -9,3 +9,11 @@
   font-weight: 600;
   line-height: 120%;
 }
+.titleSection {
+  font-size: 1.39em;
+  line-height: 140%;
+  padding: 1em;
+  border: 1px solid var(--greySecond);
+  border-radius: 4px;
+  background: var(--greySecond);
+}

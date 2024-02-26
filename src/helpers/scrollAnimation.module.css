@@ -1,0 +1,21 @@
+.animation {
+  opacity: 0;
+  transform: translateX(-100%);
+  filter: blur(1em);
+  transition: all 0.5s;
+}
+
+.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.animation:nth-child(2) {
+  transition-delay: 100ms;
+}
+.animation:nth-child(3) {
+  transition-delay: 300ms;
+}
+.animation:nth-child(4) {
+  transition-delay: 500ms;
+}
