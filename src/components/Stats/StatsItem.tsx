@@ -26,7 +26,7 @@ const StatsItem: FC<StatsItemProps> = ({ item: { text, count }, index }) => {
     return () => clearInterval(interval);
   }, [count]);
   return (
-    <ScrollAnimations>
+    <ScrollAnimations animation="animationLeft">
       <li className={s.item}>
         <p className={s.title}>{text}</p>
         <p className={s.count}>{currentCount}</p>

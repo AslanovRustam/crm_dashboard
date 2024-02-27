@@ -9,9 +9,13 @@ import s from "./scrollAnimation.module.css";
 
 interface ScrollAnimationsProps {
   children: ReactNode;
+  animation: string;
 }
 
-const ScrollAnimations: FC<ScrollAnimationsProps> = ({ children }) => {
+const ScrollAnimations: FC<ScrollAnimationsProps> = ({
+  children,
+  animation,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const containerRef = useRef(null);
 
@@ -42,7 +46,9 @@ const ScrollAnimations: FC<ScrollAnimationsProps> = ({ children }) => {
   return (
     <div
       ref={containerRef}
-      className={`${s.animation} ${isVisible ? s.visible : ""}`}
+      className={`${s[animation]} ${s.animationBasic} ${
+        isVisible ? s.visible : ""
+      }`}
     >
       {children}
     </div>

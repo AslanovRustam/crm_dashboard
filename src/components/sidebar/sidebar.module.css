@@ -1,6 +1,6 @@
 .container {
-  /* position: fixed; */
-  position: relative;
+  position: fixed;
+  /* position: relative; */
   width: 16.67em;
   height: 100vh;
   display: flex;

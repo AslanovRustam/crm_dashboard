@@ -1,65 +1,29 @@
 import type { FC } from "react";
 import TitleSection from "../Title/TitleSection";
 import RowHead from "../RowHead/RowHead";
-import Logo from "../../../public/companyLogo.svg";
 import Row from "../RowHead/Row";
-import s from "./sales.module.css";
+import { ICompanySales, ITitles } from "@/types/interface";
 
-interface SalesProps {}
+interface SalesProps {
+  data: ICompanySales[];
+  width: boolean;
+  titles: ITitles;
+  title: string;
+}
 
-const companySales = [
-  {
-    id: 0,
-    logo: <Logo className={s.logo} />,
-    name: "Costco Wholesale",
-    sold: 459,
-    income: "$600",
-  },
-  {
-    id: 0,
-    logo: <Logo className={s.logo} />,
-    name: "Costco Wholesale",
-    sold: 459,
-    income: "$600",
-  },
-  {
-    id: 0,
-    logo: <Logo className={s.logo} />,
-    name: "Costco Wholesale",
-    sold: 459,
-    income: "$600",
-  },
-  {
-    id: 0,
-    logo: <Logo className={s.logo} />,
-    name: "Costco Wholesale",
-    sold: 459,
-    income: "$600",
-  },
-  {
-    id: 0,
-    logo: <Logo className={s.logo} />,
-    name: "Costco Wholesale",
-    sold: 459,
-    income: "$600",
-  },
-  {
-    id: 0,
-    logo: <Logo className={s.logo} />,
-    name: "Costco Wholesale",
-    sold: 459,
-    income: "$600",
-  },
-];
-
-const Sales: FC<SalesProps> = () => {
+const Sales: FC<SalesProps> = ({ data, width, titles, title }) => {
   return (
     <div>
-      <TitleSection text="Sales details" />
+      <TitleSection text={title} />
       <div>
-        <RowHead first="Company" second="Sold" third="Income" />
-        {companySales?.map(({ id, logo, name, sold, income }) => (
-          <Row key={id} logo={logo} name={name} sold={sold} income={income} />
+        <RowHead
+          first={titles.first}
+          second={titles.second}
+          third={titles.third}
+          width={width}
+        />
+        {data?.map((item) => (
+          <Row key={item.id} item={item} width={width} />
         ))}
       </div>
     </div>

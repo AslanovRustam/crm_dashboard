@@ -1,6 +1,12 @@
-.animation {
+.animationLeft {
   opacity: 0;
-  transform: translateX(-100%);
+  transform: translateX(-10%);
+  filter: blur(1em);
+  transition: all 0.5s;
+}
+.animationTop {
+  opacity: 0;
+  transform: translateY(-100%);
   filter: blur(1em);
   transition: all 0.5s;
 }
@@ -8,14 +14,26 @@
 .visible {
   opacity: 1;
   filter: blur(0);
-  transform: translateX(0);
+  transform: translate(0, 0);
 }
-.animation:nth-child(2) {
+.animationBasic:nth-child(2) {
   transition-delay: 100ms;
 }
-.animation:nth-child(3) {
+.animationBasic:nth-child(3) {
   transition-delay: 300ms;
 }
-.animation:nth-child(4) {
+.animationBasic:nth-child(4) {
   transition-delay: 500ms;
+}
+.animationBasic:nth-child(5) {
+  transition-delay: 700ms;
+}
+.animationBasic:nth-child(6) {
+  transition-delay: 900ms;
+}
+.animationBasic:nth-child(7) {
+  transition-delay: 1100ms;
+}
+.animationBasic:nth-child(8) {
+  transition-delay: 1300ms;
 }

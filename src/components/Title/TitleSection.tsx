@@ -6,11 +6,7 @@ interface TitleSectionProps {
 }
 
 const TitleSection: FC<TitleSectionProps> = ({ text }) => {
-  return (
-    <div className={s.wrapper}>
-      <h2 className={s.titleSection}>{text}</h2>
-    </div>
-  );
+  return <h2 className={s.titleSection}>{text}</h2>;
 };
 
 export default TitleSection;
