@@ -26,3 +26,28 @@ export interface ITitles {
   second: string;
   third: string;
 }
+export interface ICompany {
+  id: number;
+  category: string;
+  logo: ReactElement;
+  name: string;
+  status: string;
+  promotion: string;
+  country: string;
+  data: string;
+}
+export enum Status {
+  active = "active",
+  notActive = "notActive",
+  pending = "pending",
+  suspended = "suspended",
+}
+export enum Promotion {
+  yes = "Yes",
+  no = "No",
+}
+export enum Category {
+  products = "Products",
+  supplies = "Supplies",
+  technology = "Technology",
+}

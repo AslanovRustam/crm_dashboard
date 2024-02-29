@@ -1,0 +1,43 @@
+.form {
+  position: relative;
+  width: 31em;
+  padding: 0 2.78em;
+  font-size: 1em;
+}
+.input {
+  font-size: 1em;
+  width: 100%;
+  padding: 0.85em;
+  border: 0.0694em solid var(--greyThird);
+  border-radius: 0.28em;
+  outline: none;
+  line-height: 140%;
+  transition: all 0.3s ease-in-out;
+}
+.input::placeholder {
+  color: var(--grey);
+}
+.input:hover,
+.inut:focus {
+  border-color: var(--grey);
+}
+
+.icon {
+  position: absolute;
+  right: 3.3em;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  fill: var(--grey);
+  transition: all 0.3s ease-in-out;
+  /* cursor: pointer; */
+}
+.form:hover .icon,
+.form:focus .icon {
+  rotate: 10deg;
+  right: 3.5em;
+  transform: translate(-0.3em, -50%);
+  scale: 1.1;
+}

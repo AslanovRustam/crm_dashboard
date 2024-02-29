@@ -13,7 +13,7 @@ interface NavlinksProps {
 
 const Navlinks: FC<NavlinksProps> = () => {
   const pathname = usePathname();
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => pathname.includes(path);
 
   return (
     <>

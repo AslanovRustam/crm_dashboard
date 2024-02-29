@@ -3,16 +3,9 @@ import TitleSection from "../Title/TitleSection";
 import map from "../../../public/World.png";
 import Image from "next/image";
 import s from "./countries.module.css";
+import { countries } from "@/data/data";
 
 interface CountriesProps {}
-
-const countries = [
-  { id: 0, name: "Canada", count: 2 },
-  { id: 1, name: "USA", count: 4 },
-  { id: 2, name: "Italia", count: 7 },
-  { id: 3, name: "Ukraine", count: 2 },
-  { id: 4, name: "Spain", count: 3 },
-];
 
 const Countries: FC<CountriesProps> = () => {
   return (

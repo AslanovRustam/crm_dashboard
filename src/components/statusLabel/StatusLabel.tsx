@@ -1,12 +1,6 @@
 import React from "react";
 import s from "./statuslabel.module.css";
-
-export enum Status {
-  active = "active",
-  notActive = "notActive",
-  pending = "pending",
-  suspended = "suspended",
-}
+import { Status } from "@/types/interface";
 
 export interface IStatusLabel {
   children: React.ReactNode;
