@@ -51,3 +51,15 @@ export enum Category {
   supplies = "Supplies",
   technology = "Technology",
 }
+
+export interface IPromotionData {
+  id: number;
+  percent: string;
+  name: string;
+  text: string;
+}
+export interface IFormValues {
+  name: string;
+  percent: string;
+  text: string;
+}

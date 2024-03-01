@@ -21,6 +21,12 @@
 .item {
   border-radius: 0.4em;
   background: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+.item:hover,
+.item:focus {
+  scale: 1.01;
+  transform: translateY(-0.2em);
 }
 .category,
 .categoryHead {
@@ -41,18 +47,6 @@
   transform: translateY(-50%);
 }
 
-.active {
-  color: var(--green);
-}
-.notActive {
-  color: var(--red);
-}
-.pending {
-  color: var(--orange);
-}
-.suspended {
-  color: var(--blue);
-}
 .name,
 .promotion {
   display: flex;
@@ -86,4 +80,17 @@
 .data {
   display: flex;
   justify-content: center;
+  color: var(--blackBg);
+}
+.active {
+  color: var(--green);
+}
+.notActive {
+  color: var(--red);
+}
+.pending {
+  color: var(--orange);
+}
+.suspended {
+  color: var(--blue);
 }

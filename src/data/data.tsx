@@ -135,6 +135,39 @@ export const companyList = [
     promotion: Promotion.yes,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 1,
@@ -145,6 +178,39 @@ export const companyList = [
     promotion: Promotion.no,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 2,
@@ -155,6 +221,39 @@ export const companyList = [
     promotion: Promotion.yes,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 3,
@@ -165,6 +264,39 @@ export const companyList = [
     promotion: Promotion.yes,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 4,
@@ -175,6 +307,39 @@ export const companyList = [
     promotion: Promotion.yes,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 5,
@@ -185,6 +350,39 @@ export const companyList = [
     promotion: Promotion.yes,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 6,
@@ -195,6 +393,39 @@ export const companyList = [
     promotion: Promotion.no,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 7,
@@ -205,6 +436,39 @@ export const companyList = [
     promotion: Promotion.yes,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 8,
@@ -215,6 +479,39 @@ export const companyList = [
     promotion: Promotion.no,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 9,
@@ -225,6 +522,39 @@ export const companyList = [
     promotion: Promotion.no,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
   {
     id: 10,
@@ -235,5 +565,82 @@ export const companyList = [
     promotion: Promotion.yes,
     country: "USA",
     data: "19.02.2023",
+    text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+    promo: [
+      {
+        id: 0,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 4,
+        percent: "20%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 1,
+        percent: "25%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 2,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 3,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+    ],
   },
 ];
+
+export const currentCompanyDefault = {
+  id: 100,
+  category: Category.supplies,
+  logo: <Logo style={{ width: "1.4em" }} />,
+  name: "Costco Wholesale",
+  status: Status.pending,
+  promotion: Promotion.yes,
+  country: "USA",
+  data: "19.02.2023",
+  text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
+  promo: [
+    {
+      id: 0,
+      percent: "20%",
+      name: "Discount on this product",
+      text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      id: 0,
+      percent: "20%",
+      name: "Discount on this product",
+      text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      id: 1,
+      percent: "25%",
+      name: "Discount on this product",
+      text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      id: 2,
+      percent: "10%",
+      name: "Discount on this product",
+      text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      id: 3,
+      percent: "15%",
+      name: "Discount on this product",
+      text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+  ],
+};

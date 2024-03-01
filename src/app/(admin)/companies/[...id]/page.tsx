@@ -1,9 +1,13 @@
 "use client";
+import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import { IPromotionData } from "@/types/interface";
 import Button from "@/components/Button/Button";
 import Search from "@/components/Search/Search";
 import Title from "@/components/Title/Title";
-import React, { useState } from "react";
-import { companyList } from "@/data/data";
+import Modal from "@/components/Modal/Modal";
+import AddPromotion from "@/components/AddPromotion/AddPromotion";
+import { companyList, currentCompanyDefault } from "@/data/data";
 import s from "../companies.module.css";
 
 export interface ICompanyProps {
@@ -12,23 +16,38 @@ export interface ICompanyProps {
 
 const Company = ({ params }: ICompanyProps) => {
   const [searchValue, setSearchValue] = useState("");
-  const [addCompany, SetAddCompany] = useState(false);
-
-  const currentCompany = companyList.find(
-    (item) => item.id === Number(params.id)
+  const [addPromo, setAddPromotion] = useState(false);
+  const [currentCompany, setСurrentCompany] = useState(
+    companyList.find((item) => item.id === Number(params.id)) ??
+      currentCompanyDefault
   );
 
-  const showAddCompany = () => {
-    console.log("clicked");
+  const handleOpenModal = () => {
+    setAddPromotion(!addPromo);
   };
+
+  const addPromotion = (data: IPromotionData) => {
+    toast.success(`the new promo ${data.name},has been added`);
+    setСurrentCompany({
+      ...currentCompany,
+      promo: [...currentCompany.promo, data],
+    });
+  };
+  console.log("currentCompany", currentCompany);
 
   return (
     <section>
       <Title text={currentCompany ? currentCompany.name : params.id} />
       <div className={s.formContainer}>
         <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-        <Button name="Add company" onClick={showAddCompany} />
+        <Button name="Add promotion" onClick={handleOpenModal} />
       </div>
+      {addPromo && (
+        <Modal onClose={handleOpenModal}>
+          <AddPromotion onClose={handleOpenModal} addNewPromo={addPromotion} />
+        </Modal>
+      )}
+      <Toaster position="top-right" reverseOrder={false} />
     </section>
   );
 };
