@@ -17,42 +17,43 @@ export const companySalesTitles = {
 export const companySales = [
   {
     id: 0,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    // logo: <Logo  />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
@@ -76,49 +77,49 @@ export const promotionsTitles = {
 export const promotions = [
   {
     id: 0,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-40%",
   },
   {
     id: 1,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-25%",
   },
   {
     id: 2,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-5%",
   },
   {
     id: 3,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-24%",
   },
   {
     id: 4,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-80%",
   },
   {
     id: 5,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-10%",
   },
   {
     id: 6,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-80%",
@@ -129,7 +130,7 @@ export const companyList = [
   {
     id: 0,
     category: Category.products,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.active,
     promotion: Promotion.yes,
@@ -172,7 +173,7 @@ export const companyList = [
   {
     id: 1,
     category: Category.supplies,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.notActive,
     promotion: Promotion.no,
@@ -215,7 +216,7 @@ export const companyList = [
   {
     id: 2,
     category: Category.technology,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.suspended,
     promotion: Promotion.yes,
@@ -258,7 +259,7 @@ export const companyList = [
   {
     id: 3,
     category: Category.products,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.pending,
     promotion: Promotion.yes,
@@ -301,7 +302,7 @@ export const companyList = [
   {
     id: 4,
     category: Category.technology,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.notActive,
     promotion: Promotion.yes,
@@ -344,7 +345,7 @@ export const companyList = [
   {
     id: 5,
     category: Category.supplies,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.suspended,
     promotion: Promotion.yes,
@@ -387,7 +388,7 @@ export const companyList = [
   {
     id: 6,
     category: Category.technology,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.pending,
     promotion: Promotion.no,
@@ -430,7 +431,7 @@ export const companyList = [
   {
     id: 7,
     category: Category.products,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.active,
     promotion: Promotion.yes,
@@ -473,7 +474,7 @@ export const companyList = [
   {
     id: 8,
     category: Category.products,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.notActive,
     promotion: Promotion.no,
@@ -516,7 +517,7 @@ export const companyList = [
   {
     id: 9,
     category: Category.supplies,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.active,
     promotion: Promotion.no,
@@ -559,7 +560,7 @@ export const companyList = [
   {
     id: 10,
     category: Category.supplies,
-    logo: <Logo style={{ width: "1.4em" }} />,
+    logo: <Logo />,
     name: "Costco Wholesale",
     status: Status.pending,
     promotion: Promotion.yes,
@@ -597,6 +598,18 @@ export const companyList = [
         name: "Discount on this product",
         text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
       },
+      {
+        id: 8,
+        percent: "10%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
+      {
+        id: 5,
+        percent: "15%",
+        name: "Discount on this product",
+        text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      },
     ],
   },
 ];
@@ -604,12 +617,12 @@ export const companyList = [
 export const currentCompanyDefault = {
   id: 100,
   category: Category.supplies,
-  logo: <Logo style={{ width: "1.4em" }} />,
+  logo: <Logo />,
   name: "Costco Wholesale",
   status: Status.pending,
   promotion: Promotion.yes,
   country: "USA",
-  data: "19.02.2023",
+  data: "19.03.2023",
   text: "Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
   promo: [
     {
@@ -619,7 +632,7 @@ export const currentCompanyDefault = {
       text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
-      id: 0,
+      id: 6,
       percent: "20%",
       name: "Discount on this product",
       text: "Jorem ipsum dolor sit amet, consectetur adipiscing elit.",

@@ -1,0 +1,57 @@
+.container {
+  margin-left: 2.78em;
+  display: flex;
+  gap: 1.5em;
+}
+.about {
+  width: 18.6em;
+}
+.icoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 18.6em;
+  margin-bottom: 1.25em;
+  border-radius: 0.3em;
+  background: var(--blackBg);
+}
+.logo {
+  width: 5.55em;
+}
+.name {
+  margin: 1.25em 0;
+  color: var(--milk);
+  font-size: 1.11em;
+  line-height: 150%;
+}
+.wrapper {
+  flex-direction: column;
+  display: flex;
+  border-radius: 0.3em;
+  background: var(--greySecond);
+  padding: 1.25em;
+}
+.infoTitle {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 140%;
+}
+.info,
+.text {
+  font-size: 1.11em;
+  font-weight: 400;
+  line-height: 150%;
+}
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em 0 0;
+}
+.devider {
+  height: 0.2em;
+  border-radius: 0.5em;
+  background: var(--greyThird);
+  margin: 2em 0;
+}

@@ -26,6 +26,13 @@ export interface ITitles {
   second: string;
   third: string;
 }
+
+export interface IPromo {
+  id: number;
+  name: string;
+  percent: string;
+  text: string;
+}
 export interface ICompany {
   id: number;
   category: string;
@@ -35,6 +42,8 @@ export interface ICompany {
   promotion: string;
   country: string;
   data: string;
+  promo: IPromo[];
+  text: string;
 }
 export enum Status {
   active = "active",

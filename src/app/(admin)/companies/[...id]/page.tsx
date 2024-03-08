@@ -9,6 +9,7 @@ import Modal from "@/components/Modal/Modal";
 import AddPromotion from "@/components/AddPromotion/AddPromotion";
 import { companyList, currentCompanyDefault } from "@/data/data";
 import s from "../companies.module.css";
+import CompanyInfo from "@/components/CompanyInfo/CompanyInfo";
 
 export interface ICompanyProps {
   params: { id: string };
@@ -42,6 +43,7 @@ const Company = ({ params }: ICompanyProps) => {
         <Search searchValue={searchValue} setSearchValue={setSearchValue} />
         <Button name="Add promotion" onClick={handleOpenModal} />
       </div>
+      <CompanyInfo currentCompany={currentCompany} />
       {addPromo && (
         <Modal onClose={handleOpenModal}>
           <AddPromotion onClose={handleOpenModal} addNewPromo={addPromotion} />

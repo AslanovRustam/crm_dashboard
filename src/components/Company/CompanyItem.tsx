@@ -20,9 +20,9 @@ const CompanyItem: FC<CompanyItemProps> = ({
         <p className={`${s.category} ${s[status]}`} data-status={s[status]}>
           {category}
         </p>
-        <p className={s.name}>
-          {logo} <span>{name}</span>
-        </p>
+        <div className={s.name}>
+          <p className={s.logoContainer}>{logo}</p> <span>{name}</span>
+        </div>
         <div className={s.status}>
           <StatusLabel status={status as Status}>{status}</StatusLabel>
         </div>

@@ -1,0 +1,37 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 18.6em);
+  grid-template-rows: repeat(2, 0fr);
+  gap: 1em;
+}
+.item {
+  background: var(--greySecond);
+}
+.info {
+  padding: 1.5em;
+}
+.discountConrainer {
+  width: 18.6em;
+  height: 11.1em;
+  margin-bottom: 1.25em;
+  border-radius: 0.3em;
+  background: var(--greyDark);
+}
+.percent {
+  display: inline-block;
+  padding: 0.75em;
+  border-bottom: 0.1em solid var(--light-green);
+  border-radius: 0 0 1.78em 0;
+  background: rgb(17, 24, 39);
+  color: var(--light-green);
+}
+.name {
+  font-size: 1.11em;
+  font-weight: 600;
+  line-height: 150%;
+}
+.text {
+  margin-top: 0.83em;
+  font-weight: 400;
+  line-height: 150%;
+}

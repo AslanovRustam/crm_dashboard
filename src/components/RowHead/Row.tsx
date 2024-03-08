@@ -11,7 +11,8 @@ const Row: FC<RowProps> = ({ item, width }) => {
   return (
     <div className={s.head}>
       <div className={`${s.first} ${s.row}`}>
-        {item.logo}
+        <p className={s.logoContainer}>{item.logo}</p>
+
         {item.name}
       </div>
       <div className={`${s.second} ${s.row} ${width && s.customWidth}`}>

@@ -94,3 +94,6 @@
 .suspended {
   color: var(--blue);
 }
+.logoContainer {
+  width: 1.4em;
+}
