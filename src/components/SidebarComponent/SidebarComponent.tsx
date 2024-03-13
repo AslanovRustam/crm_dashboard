@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./sidebar.module.css";
-import Navlinks from "../Navlinks/Navlinks";
+import Navlinks from "../Navlink/Navlinks";
 
 type Props = {};
 

@@ -8,7 +8,7 @@ import CompanyList from "../../../components/Company/CompanyList";
 import { useAppSelector } from "../../lib/hooks";
 import { selectFilteredCompanies } from "../../lib/selectors";
 import Modal from "../../../components/Modal/Modal";
-import AddCompany from "../../../components/AddCompany/AddCompany";
+import AddCompany from "../../../components/AddNewCompany/AddNewCompany";
 
 export interface ICompaniesProps {}
 
