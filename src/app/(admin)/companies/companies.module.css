@@ -1,10 +1,35 @@
 .section {
   /* position: relative; */
 }
-.formContainer {
+.formContainer,
+.formSingleCompanyContainer {
   margin-bottom: 2em;
   padding-right: 2.78em;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.formSingleCompanyContainer {
+  justify-content: space-around;
+}
+.soon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em 2em 1em;
+  border-radius: 1em;
+  background: var(--light-green);
+}
+.btnClose {
+  padding: 1em;
+  border-radius: 0.5em;
+  background: var(--purple);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.btnClose:hover,
+.btnClose:focus {
+  color: var(--light-green);
+  background: var(--blackBg);
 }

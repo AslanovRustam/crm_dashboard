@@ -1,21 +1,25 @@
-import type { Dispatch, FC, SetStateAction } from "react";
+import { type FC, ChangeEvent } from "react";
 import SearchIco from "../../../public/search.svg";
 import s from "./search.module.css";
+import { useAppDispatch } from "@/app/lib/hooks";
+import { setFilter } from "@/app/lib/filterSlice";
 
-interface SearchProps {
-  searchValue: string;
-  setSearchValue: Dispatch<SetStateAction<string>>;
-}
+interface SearchProps {}
 
-const Search: FC<SearchProps> = ({ searchValue, setSearchValue }) => {
+const Search: FC<SearchProps> = () => {
+  const dispatch = useAppDispatch();
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    dispatch(setFilter(value));
+  };
+
   return (
     <form className={s.form}>
       <label className={s.label}>
         <input
           className={s.input}
           placeholder="Search..."
-          value={searchValue}
-          onChange={(e) => setSearchValue(e.target.value)}
+          onChange={handleInputChange}
         />
       </label>
 

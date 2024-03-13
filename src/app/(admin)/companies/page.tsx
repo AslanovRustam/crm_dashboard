@@ -5,26 +5,41 @@ import React, { useState } from "react";
 import s from "./companies.module.css";
 import Button from "@/components/Button/Button";
 import CompanyList from "@/components/Company/CompanyList";
-import { companyList } from "@/data/data";
+import { useAppSelector } from "@/app/lib/hooks";
+import { selectFilteredCompanies } from "@/app/lib/selectors";
+import Modal from "@/components/Modal/Modal";
+import AddCompany from "@/components/AddCompany/AddCompany";
 
 export interface ICompaniesProps {}
 
 const Companies = ({}: ICompaniesProps) => {
-  const [searchValue, setSearchValue] = useState("");
-  const [addCompany, SetAddCompany] = useState(false);
+  const [addCompany, setAddCompany] = useState(false);
+
+  const companyList = useAppSelector(selectFilteredCompanies);
+  // console.log("companies", companyList);
 
   const showAddCompany = () => {
-    console.log("clicked");
+    setAddCompany(!addCompany);
   };
 
   return (
     <section>
       <Title text="Companies" />
       <div className={s.formContainer}>
-        <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+        <Search />
         <Button name="Add company" onClick={showAddCompany} />
       </div>
       <CompanyList data={companyList} />
+      {addCompany && (
+        <Modal onClose={showAddCompany}>
+          <div className={s.soon}>
+            minions work with this feature and soon it will be possible to try
+            it out
+            <Button name="CLOSE" onClick={showAddCompany} />
+          </div>
+          {/* <AddCompany onClose={showAddCompany} /> */}
+        </Modal>
+      )}
     </section>
   );
 };

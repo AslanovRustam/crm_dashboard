@@ -25,6 +25,7 @@
     rgba(233, 213, 255, 1) 58%,
     rgba(217, 249, 157, 1) 89%
   );
+  --transition: all 0.3s ease-in-out;
 }
 * {
   box-sizing: border-box;

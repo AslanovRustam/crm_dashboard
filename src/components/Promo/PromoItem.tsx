@@ -10,7 +10,7 @@ const PromoItem: FC<PromoItemProps> = ({ item: { name, percent, text } }) => {
   return (
     <li className={s.item}>
       <div className={s.discountConrainer}>
-        <p className={s.percent}>-{percent}</p>
+        <p className={s.percent}>-{percent}%</p>
       </div>
       <div className={s.info}>
         <p className={s.name}>{name}</p>

@@ -1,49 +1,52 @@
 "use client";
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { IPromotionData } from "@/types/interface";
+import { IPromo } from "@/types/interface";
 import Button from "@/components/Button/Button";
-import Search from "@/components/Search/Search";
 import Title from "@/components/Title/Title";
 import Modal from "@/components/Modal/Modal";
 import AddPromotion from "@/components/AddPromotion/AddPromotion";
-import { companyList, currentCompanyDefault } from "@/data/data";
-import s from "../companies.module.css";
+import { currentCompanyDefault } from "@/data/data";
 import CompanyInfo from "@/components/CompanyInfo/CompanyInfo";
+import { useAppDispatch, useAppSelector } from "@/app/lib/hooks";
+import { selectCompanies } from "@/app/lib/selectors";
+import { addPromoToCompany } from "@/app/lib/companySlice";
+import s from "../companies.module.css";
+import { useRouter } from "next/navigation";
 
 export interface ICompanyProps {
   params: { id: string };
 }
 
 const Company = ({ params }: ICompanyProps) => {
-  const [searchValue, setSearchValue] = useState("");
   const [addPromo, setAddPromotion] = useState(false);
-  const [currentCompany, setСurrentCompany] = useState(
-    companyList.find((item) => item.id === Number(params.id)) ??
-      currentCompanyDefault
+  const currentCompany = useAppSelector(selectCompanies).find(
+    (item) => item.id === Number(params.id)
   );
 
+  const dispatch = useAppDispatch();
+
+  const router = useRouter();
   const handleOpenModal = () => {
     setAddPromotion(!addPromo);
   };
-
-  const addPromotion = (data: IPromotionData) => {
-    toast.success(`the new promo ${data.name},has been added`);
-    setСurrentCompany({
-      ...currentCompany,
-      promo: [...currentCompany.promo, data],
-    });
+  const handleBackBtn = () => {
+    router.back();
   };
-  console.log("currentCompany", currentCompany);
+
+  const addPromotion = (data: IPromo) => {
+    toast.success(`the new promo ${data.name},has been added`);
+    dispatch(addPromoToCompany([currentCompany!.id, data]));
+  };
 
   return (
     <section>
       <Title text={currentCompany ? currentCompany.name : params.id} />
-      <div className={s.formContainer}>
-        <Search searchValue={searchValue} setSearchValue={setSearchValue} />
+      <div className={s.formSingleCompanyContainer}>
+        <Button name="Go Back" onClick={handleBackBtn} />
         <Button name="Add promotion" onClick={handleOpenModal} />
       </div>
-      <CompanyInfo currentCompany={currentCompany} />
+      {currentCompany && <CompanyInfo currentCompany={currentCompany} />}
       {addPromo && (
         <Modal onClose={handleOpenModal}>
           <AddPromotion onClose={handleOpenModal} addNewPromo={addPromotion} />

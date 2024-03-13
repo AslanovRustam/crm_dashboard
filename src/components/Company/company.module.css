@@ -46,14 +46,30 @@
   top: 50%;
   transform: translateY(-50%);
 }
-
+.category,
 .name,
-.promotion {
+.status,
+.promotion,
+.country,
+.data,
+.categoryHead,
+.nameHead {
+  display: flex;
+  justify-content: center;
+  color: var(--blackBg);
+}
+.name,
+.promotion,
+.nameHead {
   display: flex;
   align-items: center;
   gap: 0.5em;
 }
+.nameHead {
+  width: 20em;
+}
 .name {
+  justify-content: flex-start;
   width: 20em;
 }
 .status {
@@ -72,16 +88,7 @@
 .data {
   width: 10em;
 }
-.category,
-.name,
-.status,
-.promotion,
-.country,
-.data {
-  display: flex;
-  justify-content: center;
-  color: var(--blackBg);
-}
+
 .active {
   color: var(--green);
 }

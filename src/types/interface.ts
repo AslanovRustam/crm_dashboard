@@ -33,13 +33,14 @@ export interface IPromo {
   percent: string;
   text: string;
 }
+
 export interface ICompany {
   id: number;
-  category: string;
+  category: Category.products | Category.supplies | Category.technology;
   logo: ReactElement;
   name: string;
-  status: string;
-  promotion: string;
+  status: Status.active | Status.notActive | Status.pending | Status.suspended;
+  promotion: Promotion.no | Promotion.yes;
   country: string;
   data: string;
   promo: IPromo[];
