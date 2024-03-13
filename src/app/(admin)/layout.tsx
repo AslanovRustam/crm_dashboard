@@ -1,6 +1,6 @@
 import React from "react";
-import Sidebar from "../../components/Sidebar/Sidebar";
 import s from "./admin.module.css";
+import Sidebar from "@/components/Sidebar/Sidebar";
 
 export interface Props {
   children: React.ReactNode;
