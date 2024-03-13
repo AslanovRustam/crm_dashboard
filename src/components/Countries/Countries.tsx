@@ -1,6 +1,6 @@
 import type { FC } from "react";
 import TitleSection from "../Title/TitleSection";
-import map from "../../../public/World.png";
+import map from "../../../public/world.png";
 import Image from "next/image";
 import s from "./countries.module.css";
 import { countries } from "@/data/data";
