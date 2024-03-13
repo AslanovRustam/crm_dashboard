@@ -1,15 +1,15 @@
 import React from "react";
-import Categories from "@/components/Categories/Categories";
-import Sales from "@/components/Sales/Salex";
-import StatsList from "@/components/Stats/StatsList";
-import Title from "@/components/Title/Title";
-import Countries from "@/components/Countries/Countries";
+import Categories from "../../../components/Categories/Categories";
+import Sales from "../../../components/Sales/Salex";
+import StatsList from "../../../components/Stats/StatsList";
+import Title from "../../../components/Title/Title";
+import Countries from "../../../components/Countries/Countries";
 import {
   companySales,
   promotions,
   promotionsTitles,
   companySalesTitles,
-} from "@/data/data";
+} from "../../../data/data";
 import s from "./dashboard.module.css";
 
 export interface IDashboardsProps {}

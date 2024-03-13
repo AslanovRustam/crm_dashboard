@@ -2,15 +2,15 @@
 import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { IPromo } from "@/types/interface";
-import Button from "@/components/Button/Button";
-import Title from "@/components/Title/Title";
-import Modal from "@/components/Modal/Modal";
-import AddPromotion from "@/components/AddPromotion/AddPromotion";
-import { currentCompanyDefault } from "@/data/data";
-import CompanyInfo from "@/components/CompanyInfo/CompanyInfo";
-import { useAppDispatch, useAppSelector } from "@/app/lib/hooks";
-import { selectCompanies } from "@/app/lib/selectors";
-import { addPromoToCompany } from "@/app/lib/companySlice";
+import Button from "../../../../components/Button/Button";
+import Title from "../../../../components/Title/Title";
+import Modal from "../../../../components/Modal/Modal";
+import AddPromotion from "../../../../components/AddPromotion/AddPromotion";
+// import { currentCompanyDefault } from "@/data/data";
+import CompanyInfo from "../../../../components/CompanyInfo/CompanyInfo";
+import { useAppDispatch, useAppSelector } from "../../../lib/hooks";
+import { selectCompanies } from "../../../lib/selectors";
+import { addPromoToCompany } from "../../../lib/companySlice";
 import s from "../companies.module.css";
 import { useRouter } from "next/navigation";
 

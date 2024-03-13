@@ -1,14 +1,14 @@
 "use client";
-import Search from "@/components/Search/Search";
-import Title from "@/components/Title/Title";
+import Search from "../../../components/Search/Search";
+import Title from "../../../components/Title/Title";
 import React, { useState } from "react";
 import s from "./companies.module.css";
-import Button from "@/components/Button/Button";
-import CompanyList from "@/components/Company/CompanyList";
-import { useAppSelector } from "@/app/lib/hooks";
-import { selectFilteredCompanies } from "@/app/lib/selectors";
-import Modal from "@/components/Modal/Modal";
-import AddCompany from "@/components/AddCompany/AddCompany";
+import Button from "../../../components/Button/Button";
+import CompanyList from "../../../components/Company/CompanyList";
+import { useAppSelector } from "../../lib/hooks";
+import { selectFilteredCompanies } from "../../lib/selectors";
+import Modal from "../../../components/Modal/Modal";
+import AddCompany from "../../../components/AddCompany/AddCompany";
 
 export interface ICompaniesProps {}
 

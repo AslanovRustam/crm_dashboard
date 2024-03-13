@@ -1,0 +1,42 @@
+.logo {
+  width: 8.47em;
+  height: 1.67em;
+}
+.logoContainer {
+  margin: 0 auto 5em;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-left: 1.2em;
+}
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  color: rgb(250, 250, 250);
+  font-size: 1.2em;
+  line-height: 141%;
+}
+.icon {
+  width: 1.2em;
+  fill: var(--milk);
+}
+.active,
+.item:hover,
+.item:focus {
+  color: var(--light-green);
+}
+.active span::after {
+  content: "";
+  /* position: relative; */
+  position: absolute;
+  width: 0.5em;
+  height: 150%;
+  right: 0.5em;
+  top: -0.4em;
+  border-radius: 0.2em;
+  background: var(--light-pink);
+}
