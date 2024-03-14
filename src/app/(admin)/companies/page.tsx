@@ -32,12 +32,7 @@ const Companies = ({}: ICompaniesProps) => {
       <CompanyList data={companyList} />
       {addCompany && (
         <Modal onClose={showAddCompany}>
-          <div className={s.soon}>
-            minions work with this feature and soon it will be possible to try
-            it out
-            <Button name="CLOSE" onClick={showAddCompany} />
-          </div>
-          {/* <AddCompany onClose={showAddCompany} /> */}
+          <AddCompany onClose={showAddCompany} />
         </Modal>
       )}
     </section>

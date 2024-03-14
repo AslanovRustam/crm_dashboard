@@ -8,7 +8,6 @@ export interface IStat {
 
 export interface ICompanySales {
   id: number;
-  logo: ReactElement;
   name: string;
   sold?: number;
   income?: string;
@@ -37,7 +36,6 @@ export interface IPromo {
 export interface ICompany {
   id: number;
   category: Category.products | Category.supplies | Category.technology;
-  logo: ReactElement;
   name: string;
   status: Status.active | Status.notActive | Status.pending | Status.suspended;
   promotion: Promotion.no | Promotion.yes;

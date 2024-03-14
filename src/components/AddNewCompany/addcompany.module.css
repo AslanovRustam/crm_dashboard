@@ -1,18 +1,30 @@
-.form {
+.container {
   position: relative;
-  width: 20em;
   display: flex;
-  flex-direction: column;
   background-color: var(--greySecond);
-  color: var(--blackBg);
+  flex-direction: column;
   padding: 2em;
   border-radius: 0.6em;
+}
+.form {
+  display: flex;
+  color: var(--blackBg);
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+.leftSide,
+.rightSide,
+.innerSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 1.5em;
 }
 .title {
-  font-size: 1.4em;
+  font-size: 2em;
   font-weight: 600;
   line-height: 140%;
+  /* margin-bottom: 2.2em; */
 }
 .label {
   position: relative;
@@ -20,6 +32,7 @@
   flex-direction: column;
 }
 .input {
+  font-size: 1em;
   outline: none;
   padding: 0.833em;
   border-radius: 0.3em;
@@ -61,4 +74,13 @@
 .errorBorder:hover,
 .errorBorder:focus {
   border-color: var(--red);
+}
+.select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("../../../public/arrow.png");
+  background-repeat: no-repeat;
+  background-position: right 1em top 50%;
+  background-size: 1em;
 }

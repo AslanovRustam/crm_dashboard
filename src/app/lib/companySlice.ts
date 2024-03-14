@@ -20,7 +20,7 @@ export const companiesSlice = createSlice({
       const [companyId, promo] = action.payload;
       state.items = state.items.map((item) =>
         item.id === companyId
-          ? { ...item, promo: [...item.promo, promo] } // Добавление нового объекта promo в массив promo конкретной компании
+          ? { ...item, promo: [...item.promo, promo] }
           : item
       );
     },

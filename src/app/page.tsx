@@ -9,7 +9,7 @@ export default function Home() {
         {text}
       </h1>
       <Link href="/companies">
-        <p className={s.btn}>go to content</p>
+        <p className={s.btn}>go to dashboard</p>
       </Link>
     </main>
   );

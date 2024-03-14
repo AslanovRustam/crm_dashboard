@@ -18,42 +18,36 @@ export const companySales = [
   {
     id: 0,
     // logo: <Logo  />,
-    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
   },
   {
     id: 0,
-    logo: <Logo />,
     name: "Costco Wholesale",
     sold: 459,
     income: "$600",
@@ -77,49 +71,42 @@ export const promotionsTitles = {
 export const promotions = [
   {
     id: 0,
-    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-40%",
   },
   {
     id: 1,
-    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-25%",
   },
   {
     id: 2,
-    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-5%",
   },
   {
     id: 3,
-    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-24%",
   },
   {
     id: 4,
-    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-80%",
   },
   {
     id: 5,
-    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-10%",
   },
   {
     id: 6,
-    logo: <Logo />,
     name: "Costco Wholesale",
     promoName: "Norem ipsum dolor ",
     percent: "-80%",
@@ -130,7 +117,6 @@ export const companyList = [
   {
     id: 0,
     category: Category.products,
-    logo: <Logo />,
     name: "First Wholesale",
     status: Status.active,
     promotion: Promotion.yes,
@@ -173,7 +159,6 @@ export const companyList = [
   {
     id: 1,
     category: Category.supplies,
-    logo: <Logo />,
     name: "Second Wholesale",
     status: Status.notActive,
     promotion: Promotion.no,
@@ -216,7 +201,6 @@ export const companyList = [
   {
     id: 2,
     category: Category.technology,
-    logo: <Logo />,
     name: "Third Wholesale",
     status: Status.suspended,
     promotion: Promotion.yes,
@@ -259,7 +243,6 @@ export const companyList = [
   {
     id: 3,
     category: Category.products,
-    logo: <Logo />,
     name: "Fourth Wholesale",
     status: Status.pending,
     promotion: Promotion.yes,
@@ -302,7 +285,6 @@ export const companyList = [
   {
     id: 4,
     category: Category.technology,
-    logo: <Logo />,
     name: "Fifth Wholesale",
     status: Status.notActive,
     promotion: Promotion.yes,
@@ -345,7 +327,6 @@ export const companyList = [
   {
     id: 5,
     category: Category.supplies,
-    logo: <Logo />,
     name: "Sixth Wholesale",
     status: Status.suspended,
     promotion: Promotion.yes,
@@ -388,7 +369,6 @@ export const companyList = [
   {
     id: 6,
     category: Category.technology,
-    logo: <Logo />,
     name: "Seventh Wholesale",
     status: Status.pending,
     promotion: Promotion.no,
@@ -431,7 +411,6 @@ export const companyList = [
   {
     id: 7,
     category: Category.products,
-    logo: <Logo />,
     name: "Eighth Wholesale",
     status: Status.active,
     promotion: Promotion.yes,
@@ -474,7 +453,6 @@ export const companyList = [
   {
     id: 8,
     category: Category.products,
-    logo: <Logo />,
     name: "Ninth Wholesale",
     status: Status.notActive,
     promotion: Promotion.no,
@@ -517,7 +495,6 @@ export const companyList = [
   {
     id: 9,
     category: Category.supplies,
-    logo: <Logo />,
     name: "Tenth Wholesale",
     status: Status.active,
     promotion: Promotion.no,
@@ -560,7 +537,6 @@ export const companyList = [
   {
     id: 10,
     category: Category.supplies,
-    logo: <Logo />,
     name: "Eleventh Wholesale",
     status: Status.pending,
     promotion: Promotion.yes,
@@ -617,7 +593,6 @@ export const companyList = [
 export const currentCompanyDefault = {
   id: 100,
   category: Category.supplies,
-  logo: <Logo />,
   name: "Twelfth Wholesale",
   status: Status.pending,
   promotion: Promotion.yes,
