@@ -1,10 +1,12 @@
 import type { FC } from "react";
+import Image from "next/image";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Category, Promotion, Status } from "@/types/interface";
-import Button from "../Button/Button";
 import { useAppDispatch } from "@/app/lib/hooks";
 import { addCompany } from "@/app/lib/companySlice";
+import { Category, Promotion, Status } from "@/types/interface";
+import Button from "../Button/Button";
+import arrow from "../../../public/arrow.png";
 import s from "./addcompany.module.css";
 
 interface AddCompanyProps {
@@ -50,11 +52,7 @@ const signupSchema = Yup.object().shape({
     .min(2, "too short!")
     .max(300, "too long!")
     .required("required"),
-  data: Yup.number()
-    .required("required")
-    .typeError("must be a number")
-    .positive("must be positive")
-    .integer(),
+  data: Yup.date().required("required"),
 });
 
 const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
@@ -72,15 +70,14 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
     onSubmit: (values) => {
       const newCompany = {
         ...values,
-        category: Category[values.category as keyof typeof Category],
-        status: Status[values.status as keyof typeof Status],
+        category: values.category as Category,
+        status: values.status as Status,
         id: Date.now(),
         promotion: Promotion.no,
         promo: [],
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id. Odio ut sem nulla pharetra diam sit. Id semper risus in hendrerit. Nibh praesent tristique magna sit amet purus. Non odio euismod lacinia at quis risus sed vulputate. Diam ut venenatis tellus in metus vulputate eu",
       };
-      console.log(newCompany);
-      console.log("values", values);
+
       dispatch(addCompany(newCompany));
       onClose();
     },
@@ -110,7 +107,6 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
                 name="status"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                // value={formik.values.status}
                 defaultValue="default"
               >
                 <option disabled value="default">
@@ -122,7 +118,7 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
                   </option>
                 ))}
               </select>
-
+              <Image src={arrow} alt="arrow ico" className={s.arrowIco} />
               {formik.touched.status && formik.errors.status ? (
                 <div className={s.errorMessage}>{formik.errors.status}</div>
               ) : null}
@@ -167,26 +163,8 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
           </label>
           <label className={s.label}>
             <span className={s.name}>Category</span>
-            {/* <select
-              aria-label="select"
-              className={`${s.input} ${s.select} ${
-                formik.touched.category &&
-                formik.errors.category &&
-                s.errorBorder
-              }`}
-              name="category"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              value={formik.values.category}
-            >
-              {categoryForSelect.map(({ id, name }) => (
-                <option key={id} value={name}>
-                  {name}
-                </option>
-              ))}
-            </select> */}
             <select
-              aria-label="select"
+              // aria-label="select"
               className={`${s.input} ${s.select} ${
                 formik.touched.category &&
                 formik.errors.category &&
@@ -207,7 +185,7 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
                 </option>
               ))}
             </select>
-
+            <Image src={arrow} alt="arrow ico" className={s.arrowIco} />
             {formik.touched.category && formik.errors.category ? (
               <div className={s.errorMessage}>{formik.errors.category}</div>
             ) : null}
@@ -218,6 +196,7 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
               className={`${s.input} ${
                 formik.touched.data && formik.errors.data && s.errorBorder
               }`}
+              type="date"
               placeholder="date"
               name="data"
               onChange={formik.handleChange}

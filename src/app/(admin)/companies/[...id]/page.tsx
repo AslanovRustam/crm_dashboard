@@ -1,18 +1,17 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 import { IPromo } from "@/types/interface";
 import Button from "../../../../components/Button/Button";
 import Title from "../../../../components/Title/Title";
 import Modal from "../../../../components/Modal/Modal";
 import AddPromotion from "../../../../components/AddPromotion/AddPromotion";
-// import { currentCompanyDefault } from "@/data/data";
 import CompanyInfo from "../../../../components/CompanyInfo/CompanyInfo";
 import { useAppDispatch, useAppSelector } from "../../../lib/hooks";
 import { selectCompanies } from "../../../lib/selectors";
 import { addPromoToCompany } from "../../../lib/companySlice";
 import s from "../companies.module.css";
-import { useRouter } from "next/navigation";
 
 export interface ICompanyProps {
   params: { id: string };
@@ -41,7 +40,7 @@ const Company = ({ params }: ICompanyProps) => {
 
   return (
     <section>
-      <Title text={currentCompany ? currentCompany.name : params.id} />
+      <Title text={currentCompany!.name} />
       <div className={s.formSingleCompanyContainer}>
         <Button name="Go Back" onClick={handleBackBtn} />
         <Button name="Add promotion" onClick={handleOpenModal} />

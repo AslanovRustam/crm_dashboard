@@ -79,8 +79,20 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: url("../../../public/arrow.png");
+  /* background-image: url("../../../public/arrow.png");
   background-repeat: no-repeat;
   background-position: right 1em top 50%;
-  background-size: 1em;
+  background-size: 1em; */
+}
+.arrowIco {
+  position: absolute;
+  right: 1em;
+  top: 58%;
+  width: 1em;
+  height: 1em;
+  transition: var(--transition);
+}
+.label:hover .arrowIco,
+.label:focus .arrowIco {
+  rotate: 180deg;
 }

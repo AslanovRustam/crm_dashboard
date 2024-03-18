@@ -12,7 +12,7 @@ interface CompanyItemProps {
 }
 
 const CompanyItem: FC<CompanyItemProps> = ({
-  item: { category, logo, name, status, promotion, country, data, id },
+  item: { category, name, status, promotion, country, data, id, promo },
 }) => {
   return (
     <Link href={`./companies/${id}`}>
@@ -21,23 +21,22 @@ const CompanyItem: FC<CompanyItemProps> = ({
           {category}
         </p>
         <div className={s.name}>
-          <p className={s.logoContainer}>{logo}</p> <span>{name}</span>
+          <span>{name}</span>
         </div>
         <div className={s.status}>
           <StatusLabel status={status as Status}>{status}</StatusLabel>
         </div>
         <p
           className={`${s.promotion} ${
-            promotion === Promotion.yes ? s.active : s.notActive
+            promo.length > 0 ? s.active : s.notActive
           }`}
         >
           <Image
-            src={promotion === Promotion.yes ? yes : no}
+            src={promo.length > 0 ? yes : no}
             alt={promotion}
             className={s.image}
           />
-
-          {promotion}
+          {promo.length > 0 ? Promotion.yes : Promotion.no}
         </p>
         <p className={s.country}>{country}</p>
         <p className={s.data}>{data}</p>

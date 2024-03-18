@@ -2,30 +2,23 @@ import type { FC } from "react";
 import { ICompany, Status } from "@/types/interface";
 import StatusLabel from "../statusLabel/StatusLabel";
 import s from "./companyInfo.module.css";
-import PromoList from "../Promo/PromoList";
+import dynamic from "next/dynamic";
+const PromoList = dynamic(() => import("../Promo/PromoList"), {
+  loading: () => <p>Loading list of promo</p>,
+  ssr: false,
+});
 
 interface CompanyInfoProps {
   currentCompany: ICompany;
 }
 
 const CompanyInfo: FC<CompanyInfoProps> = ({
-  currentCompany: {
-    category,
-    logo,
-    name,
-    status,
-    promotion,
-    country,
-    data,
-    promo,
-    text,
-  },
+  currentCompany: { category, name, status, country, data, promo, text },
 }) => {
   return (
     <div className={s.container}>
       <div className={s.about}>
         <div className={s.icoContainer}>
-          <div className={s.logo}>{logo}</div>
           <p className={s.name}>{name}</p>
           <StatusLabel status={status as Status}>{status}</StatusLabel>
         </div>

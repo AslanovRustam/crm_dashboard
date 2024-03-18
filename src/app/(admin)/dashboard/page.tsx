@@ -11,6 +11,7 @@ import {
   companySalesTitles,
 } from "../../../data/data";
 import s from "./dashboard.module.css";
+import PromoChart from "@/components/PromoChart/PromoChart";
 
 export interface IDashboardsProps {}
 
@@ -20,22 +21,24 @@ const Dashboards = ({}: IDashboardsProps) => {
       <Title text="Dashboards" />
       <StatsList />
       <div className={s.container}>
+        <PromoChart title="Promotions" />
+
+        <Categories />
+      </div>
+      <div className={s.container}>
+        <Countries />
         <Sales
           data={companySales}
           width={false}
           titles={companySalesTitles}
           title="Sales details"
         />
-        <Categories />
-      </div>
-      <div className={s.container}>
-        <Countries />
-        <Sales
+        {/* <Sales
           data={promotions}
           width
           titles={promotionsTitles}
           title="Promotions"
-        />
+        /> */}
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ const initialState = {
 };
 
 type AddPromoPayload = [number, IPromo];
+type UpdCompanyPayload = [number, ICompany];
 
 export const companiesSlice = createSlice({
   name: "companies",
@@ -24,9 +25,16 @@ export const companiesSlice = createSlice({
           : item
       );
     },
+    updateCompanyInfo: (state, action: PayloadAction<UpdCompanyPayload>) => {
+      const [companyId, updatedCompany] = action.payload;
+      state.items = state.items.map((item) =>
+        item.id === companyId ? updatedCompany : item
+      );
+    },
   },
 });
 
-export const { addCompany, addPromoToCompany } = companiesSlice.actions;
+export const { addCompany, addPromoToCompany, updateCompanyInfo } =
+  companiesSlice.actions;
 
 export default companiesSlice.reducer;

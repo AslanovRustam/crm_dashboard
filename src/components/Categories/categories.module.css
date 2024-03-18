@@ -5,15 +5,14 @@
   gap: 0.833em;
 }
 .item {
-  width: 10em;
+  /* width: 10em; */
+  width: auto;
   border-radius: 0.3em;
   background-color: var(--blackBg);
   color: var(--light-green);
   padding: 0.833em;
 }
-/* .item:nth-child(odd) {
-  color: var(--purple);
-} */
+
 .name {
   text-align: left;
   color: var(--white);
