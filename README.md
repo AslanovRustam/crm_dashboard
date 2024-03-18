@@ -6,4 +6,4 @@ This is a CRM Dashboard application built with Next.js and TypeScript. It provid
 
 ## Technology stack
 
-Next.js, TS, HTML, CSS
+Next.js, TS, Chart.js
