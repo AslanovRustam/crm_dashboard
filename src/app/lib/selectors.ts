@@ -15,3 +15,5 @@ export const selectFilteredCompanies = createSelector(
     );
   }
 );
+
+export const selectUser = (state: RootState): string => state.user.name;

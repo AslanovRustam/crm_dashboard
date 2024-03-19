@@ -5,12 +5,13 @@ interface ButtonProps {
   name: string;
   onClick: () => void;
   width?: string;
+  type?: "submit" | "button" | "reset";
 }
 
-const Button: FC<ButtonProps> = ({ name, onClick, width }) => {
+const Button: FC<ButtonProps> = ({ name, onClick, width, type }) => {
   return (
     <button
-      type="button"
+      type={type ? type : "button"}
       className={s.btn}
       style={{ width: `${width}` }}
       onClick={onClick}

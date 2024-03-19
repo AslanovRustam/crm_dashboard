@@ -4,12 +4,7 @@ import Sales from "../../../components/Sales/Salex";
 import StatsList from "../../../components/Stats/StatsList";
 import Title from "../../../components/Title/Title";
 import Countries from "../../../components/Countries/Countries";
-import {
-  companySales,
-  promotions,
-  promotionsTitles,
-  companySalesTitles,
-} from "../../../data/data";
+import { companySales, companySalesTitles } from "../../../data/data";
 import s from "./dashboard.module.css";
 import PromoChart from "@/components/PromoChart/PromoChart";
 
@@ -33,12 +28,6 @@ const Dashboards = ({}: IDashboardsProps) => {
           titles={companySalesTitles}
           title="Sales details"
         />
-        {/* <Sales
-          data={promotions}
-          width
-          titles={promotionsTitles}
-          title="Promotions"
-        /> */}
       </div>
     </section>
   );

@@ -12,17 +12,27 @@ import {
 import storage from "redux-persist/lib/storage";
 import companiesReducer from "./companySlice";
 import filterReducer from "./filterSlice";
+import userReduser from "./userSlice";
 
-const persistConfig = {
+const persistCompanyConfig = {
   key: "companies",
   storage: storage,
 };
+const persistUserConfig = {
+  key: "user",
+  storage: storage,
+};
 
-const persistedReducer = persistReducer(persistConfig, companiesReducer);
+const persistedCompaniesReducer = persistReducer(
+  persistCompanyConfig,
+  companiesReducer
+);
+const persistedUserReducer = persistReducer(persistUserConfig, userReduser);
 
 export const store = configureStore({
   reducer: {
-    companies: persistedReducer,
+    companies: persistedCompaniesReducer,
+    user: persistedUserReducer,
     filter: filterReducer,
   },
   middleware: (getDefaultMiddleware) =>
