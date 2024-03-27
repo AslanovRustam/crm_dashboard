@@ -15,3 +15,13 @@
   background-color: var(--milk);
   color: var(--blackBg);
 }
+.delete {
+  border-color: var(--red);
+  background-color: var(--red);
+  /* color: var(--red); */
+}
+.delete:hover,
+.delete:focus {
+  background-color: var(--orange);
+  color: var(--milk);
+}

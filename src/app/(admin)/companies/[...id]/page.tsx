@@ -13,6 +13,7 @@ import { selectCompanies } from "../../../lib/selectors";
 import { addPromoToCompany } from "../../../lib/companySlice";
 import AddCompany from "@/components/AddNewCompany/AddNewCompany";
 import s from "../companies.module.css";
+import DeleteCompany from "@/components/DeleteCompany/DeleteCompany";
 
 export interface ICompanyProps {
   params: { id: string };
@@ -60,6 +61,13 @@ const Company = ({ params }: ICompanyProps) => {
         addNewPromo={addPromotion}
       />
     ),
+    deleteCompany: (
+      <DeleteCompany
+        onClose={() => setShowModal(false)}
+        companyId={Number(params.id)}
+        name={currentCompany?.name ?? "this"}
+      />
+    ),
   };
 
   return (
@@ -74,6 +82,11 @@ const Company = ({ params }: ICompanyProps) => {
         <Button
           name="Add promotion"
           onClick={() => handleOpenModal("addPromotion")}
+        />
+        <Button
+          name="DELETE company"
+          onClick={() => handleOpenModal("deleteCompany")}
+          delete
         />
       </div>
       {currentCompany && <CompanyInfo currentCompany={currentCompany} />}

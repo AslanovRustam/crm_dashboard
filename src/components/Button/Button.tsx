@@ -6,13 +6,20 @@ interface ButtonProps {
   onClick: () => void;
   width?: string;
   type?: "submit" | "button" | "reset";
+  delete?: boolean;
 }
 
-const Button: FC<ButtonProps> = ({ name, onClick, width, type }) => {
+const Button: FC<ButtonProps> = ({
+  name,
+  onClick,
+  width,
+  type,
+  delete: deleteProp = false,
+}) => {
   return (
     <button
       type={type ? type : "button"}
-      className={s.btn}
+      className={`${s.btn} ${deleteProp && s.delete}`}
       style={{ width: `${width}` }}
       onClick={onClick}
     >

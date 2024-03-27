@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  width: 30em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--greySecond);
+  color: var(--blackBg);
+  padding: 2em;
+  border-radius: 0.6em;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}

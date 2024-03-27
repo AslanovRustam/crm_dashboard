@@ -32,10 +32,17 @@ export const companiesSlice = createSlice({
         item.id === companyId ? updatedCompany : item
       );
     },
+    deleteCompany: (state, action: PayloadAction<number>) => {
+      state.items = state.items.filter((item) => item.id !== action.payload);
+    },
   },
 });
 
-export const { addCompany, addPromoToCompany, updateCompanyInfo } =
-  companiesSlice.actions;
+export const {
+  addCompany,
+  addPromoToCompany,
+  updateCompanyInfo,
+  deleteCompany,
+} = companiesSlice.actions;
 
 export default companiesSlice.reducer;

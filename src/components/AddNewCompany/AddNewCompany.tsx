@@ -50,7 +50,7 @@ const signupSchema = Yup.object().shape({
     .required("required"),
   description: Yup.string()
     .min(2, "too short!")
-    .max(300, "too long!")
+    .max(500, "too long!")
     .required("required"),
   data: Yup.date().required("required"),
 });
