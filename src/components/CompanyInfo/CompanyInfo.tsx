@@ -3,6 +3,7 @@ import { ICompany, Status } from "@/types/interface";
 import StatusLabel from "../statusLabel/StatusLabel";
 import s from "./companyInfo.module.css";
 import dynamic from "next/dynamic";
+
 const PromoList = dynamic(() => import("../Promo/PromoList"), {
   loading: () => <p>Loading list of promo</p>,
   ssr: false,

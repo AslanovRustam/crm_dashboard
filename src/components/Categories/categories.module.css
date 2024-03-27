@@ -2,11 +2,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.833em;
+  gap: 0.5em;
+  margin-top: 2em;
 }
 .item {
-  /* width: 10em; */
-  width: auto;
+  width: 6em;
+  /* width: auto; */
   border-radius: 0.3em;
   background-color: var(--blackBg);
   color: var(--light-green);

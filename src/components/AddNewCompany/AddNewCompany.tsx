@@ -3,15 +3,15 @@ import Image from "next/image";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useAppDispatch } from "@/app/lib/hooks";
-import { addCompany } from "@/app/lib/companySlice";
-import { Category, Promotion, Status } from "@/types/interface";
+import { addCompany, updateCompanyInfo } from "@/app/lib/companySlice";
+import { Category, ICompany, Promotion, Status } from "@/types/interface";
 import Button from "../Button/Button";
 import arrow from "../../../public/arrow.png";
 import s from "./addcompany.module.css";
 
 interface AddCompanyProps {
   onClose: () => void;
-  //   addNewPromo: (data: IPromotionData) => void;
+  currentCompany?: ICompany;
 }
 
 const statusForSelect = [
@@ -35,7 +35,7 @@ const signupSchema = Yup.object().shape({
     )
     .required("required"),
   country: Yup.string()
-    .min(4, "too short!")
+    .min(2, "too short!")
     .max(30, "too long!")
     .required("required"),
   name: Yup.string()
@@ -55,16 +55,16 @@ const signupSchema = Yup.object().shape({
   data: Yup.date().required("required"),
 });
 
-const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
+const AddCompany: FC<AddCompanyProps> = ({ onClose, currentCompany }) => {
   const dispatch = useAppDispatch();
   const formik = useFormik({
     initialValues: {
-      status: "",
-      country: "",
-      name: "",
-      category: "",
-      data: "",
-      description: "",
+      status: currentCompany?.status ?? "",
+      country: currentCompany?.country ?? "",
+      name: currentCompany?.name ?? "",
+      category: currentCompany?.category ?? "",
+      data: currentCompany?.data ?? "",
+      description: currentCompany?.text ?? "",
     },
     validationSchema: signupSchema,
     onSubmit: (values) => {
@@ -72,14 +72,30 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
         ...values,
         category: values.category as Category,
         status: values.status as Status,
-        id: Date.now(),
-        promotion: Promotion.no,
-        promo: [],
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consequat nisl vel pretium lectus quam id. Odio ut sem nulla pharetra diam sit. Id semper risus in hendrerit. Nibh praesent tristique magna sit amet purus. Non odio euismod lacinia at quis risus sed vulputate. Diam ut venenatis tellus in metus vulputate eu",
+        id: currentCompany ? currentCompany.id : Date.now(),
+        promotion: currentCompany ? currentCompany.promotion : Promotion.no,
+        promo: currentCompany ? currentCompany.promo : [],
+        text: values.description,
       };
 
-      dispatch(addCompany(newCompany));
-      onClose();
+      const makeCorrectRequest = () => {
+        if (currentCompany) {
+          console.log("if currentCompany", currentCompany);
+          dispatch(updateCompanyInfo([currentCompany.id, newCompany]));
+          onClose();
+          return;
+        }
+        console.log("newCompany", newCompany);
+        dispatch(addCompany(newCompany));
+        onClose();
+      };
+      makeCorrectRequest();
+      // const makeCorrectRequest = currentCompany
+      //   ? (dispatch(updateCompanyInfo([currentCompany.id, newCompany])),
+      //     onClose())
+      //   : (dispatch(addCompany(newCompany)), onClose());
+
+      // return makeCorrectRequest;
     },
   });
 
@@ -107,7 +123,8 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
                 name="status"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                defaultValue="default"
+                // defaultValue="default"
+                defaultValue={currentCompany?.status ?? "default"}
               >
                 <option disabled value="default">
                   Select status
@@ -173,8 +190,8 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose }) => {
               name="category"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
-              // value={formik.values.status}
-              defaultValue="default"
+              defaultValue={currentCompany?.category ?? "default"}
+              // defaultValue="default"
             >
               <option disabled value="default">
                 Select category

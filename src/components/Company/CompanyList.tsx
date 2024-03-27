@@ -1,13 +1,15 @@
+"use client";
 import type { FC } from "react";
 import s from "./company.module.css";
-import { ICompany } from "@/types/interface";
 import CompanyItem from "./CompanyItem";
+import { useAppSelector } from "@/app/lib/hooks";
+import { selectFilteredCompanies } from "@/app/lib/selectors";
 
-interface CompanyListProps {
-  data: ICompany[];
-}
+interface CompanyListProps {}
 
-const CompanyList: FC<CompanyListProps> = ({ data }) => {
+const CompanyList: FC<CompanyListProps> = () => {
+  const companyList = useAppSelector(selectFilteredCompanies);
+  console.log("companies", companyList);
   return (
     <div className={s.container}>
       <ul className={s.list}>
@@ -19,7 +21,7 @@ const CompanyList: FC<CompanyListProps> = ({ data }) => {
           <p className={s.country}>Country</p>
           <p className={s.data}>Joined data</p>
         </li>
-        {data.map((item) => (
+        {companyList.map((item) => (
           <CompanyItem key={item.id} item={item} />
         ))}
       </ul>

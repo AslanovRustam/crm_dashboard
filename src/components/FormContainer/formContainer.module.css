@@ -1,0 +1,7 @@
+.formContainer {
+  margin-bottom: 2em;
+  padding-right: 2.78em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

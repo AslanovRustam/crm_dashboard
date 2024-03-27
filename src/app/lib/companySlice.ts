@@ -4,6 +4,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState = {
   items: companyList,
+  currentCompany: null,
 };
 
 type AddPromoPayload = [number, IPromo];

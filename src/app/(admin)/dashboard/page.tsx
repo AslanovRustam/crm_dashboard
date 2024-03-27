@@ -7,8 +7,13 @@ import Countries from "../../../components/Countries/Countries";
 import { companySales, companySalesTitles } from "../../../data/data";
 import s from "./dashboard.module.css";
 import PromoChart from "@/components/PromoChart/PromoChart";
+import { Metadata } from "next";
 
 export interface IDashboardsProps {}
+
+export const metadata: Metadata = {
+  title: "CRM Dashboard | Dasboard ",
+};
 
 const Dashboards = ({}: IDashboardsProps) => {
   return (

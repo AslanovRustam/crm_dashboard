@@ -1,13 +1,13 @@
 import { type FC } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { IPromotionData } from "@/types/interface";
+import { IPromo } from "@/types/interface";
 import Button from "../Button/Button";
 import s from "./addpromotion.module.css";
 
 interface AddPromotionProps {
   onClose: () => void;
-  addNewPromo: (data: IPromotionData) => void;
+  addNewPromo: (data: IPromo) => void;
 }
 
 const signupSchema = Yup.object().shape({
