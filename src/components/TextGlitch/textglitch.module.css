@@ -1,0 +1,47 @@
+.title {
+  position: relative;
+  letter-spacing: 0.5em;
+  font-size: 4em;
+  text-transform: capitalize;
+  margin-bottom: 1em;
+  color: var(--red);
+}
+.title::after,
+.title::before {
+  content: attr(data-text);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+.title::before {
+  animation: glitch 2s both infinite;
+  color: var(--green);
+  /* z-index: -1; */
+}
+.title::after {
+  animation: glitch 2s reverse both infinite;
+  color: var(--white);
+  /* z-index: -2; */
+}
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-0.025em, 0.025em);
+  }
+  40% {
+    transform: translate(-0.025em, -0.025em);
+  }
+  60% {
+    transform: translate(0.025em, 0.025em);
+  }
+  80% {
+    transform: translate(0.025em, -0.025em);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

@@ -1,14 +1,13 @@
 import { StoreProvider } from "./lib/StoreProvider";
 import UserLogin from "@/components/User/UserLogin";
 import s from "./homepage.module.css";
+import TextGlich from "@/components/TextGlitch/TextGlitch";
 
 export default function Home() {
   const text = "Home page";
   return (
     <main className={s.main}>
-      <h1 className={s.title} data-text={text}>
-        {text}
-      </h1>
+      <TextGlich text={text} />
       <StoreProvider>
         <UserLogin />
       </StoreProvider>

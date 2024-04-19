@@ -6,6 +6,7 @@ import Logo from "../../../public/logo.svg";
 import DashboardIcon from "../../../public/dashboard.svg";
 import BriefcaseIcon from "../../../public/briefcase.svg";
 import s from "./navlinks.module.css";
+import TransitionLink from "../TransitionLink/TransitionLink";
 
 interface NavlinksProps {
   // params: string;
@@ -18,9 +19,12 @@ const Navlinks: FC<NavlinksProps> = () => {
   return (
     <>
       <Link href="/" className={s.logoContainer}>
-        <Logo className={s.logo} />
+        <TransitionLink href="/">
+          <Logo className={s.logo} />
+        </TransitionLink>
       </Link>
       <nav className={s.list}>
+        {/* <TransitionLink href="/dashboard"> */}
         <Link
           href="/dashboard"
           className={`${s.item} ${isActive("/dashboard") && s.active}`}
@@ -28,6 +32,8 @@ const Navlinks: FC<NavlinksProps> = () => {
           <DashboardIcon className={s.icon} />
           <span>Dashboard</span>
         </Link>
+        {/* </TransitionLink> */}
+        {/* <TransitionLink href="/companies"> */}
         <Link
           href="/companies"
           className={`${s.item} ${isActive("/companies") && s.active}`}
@@ -35,6 +41,7 @@ const Navlinks: FC<NavlinksProps> = () => {
           <BriefcaseIcon className={s.icon} />
           <span>Companies</span>
         </Link>
+        {/* </TransitionLink> */}
       </nav>
     </>
   );

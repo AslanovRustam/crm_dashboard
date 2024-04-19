@@ -4,9 +4,9 @@ import { useRouter } from "next/navigation";
 import { useAppDispatch, useAppSelector } from "@/app/lib/hooks";
 import { addUserName } from "@/app/lib/userSlice";
 import Input from "../Input/Input";
-import Button from "../Button/Button";
-import s from "./user.module.css";
 import { selectUser } from "@/app/lib/selectors";
+import TransitionLink from "../TransitionLink/TransitionLink";
+import s from "./user.module.css";
 
 interface UserLoginProps {}
 
@@ -42,13 +42,19 @@ const UserLogin: FC<UserLoginProps> = () => {
         placeholder="Type your name"
         error={error}
       />
-      <Button
-        name="Login"
-        onClick={() => console.log("you in")}
-        type="submit"
-      />
+      <TransitionLink href="/dashboard" className="btn">
+        login
+      </TransitionLink>
     </form>
   );
 };
 
 export default UserLogin;
+
+{
+  /* <Button
+          name="Login"
+          onClick={() => console.log("you in")}
+          type="submit"
+        /> */
+}

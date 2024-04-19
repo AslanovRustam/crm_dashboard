@@ -1,0 +1,38 @@
+.default {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.btn {
+  outline: none;
+  padding: 0.6em 1.5em;
+  border-radius: 0.4em;
+  border: 0.1em solid var(--blackBg);
+  font-size: 1.1em;
+  line-height: 1.5em;
+  background-color: var(--blackBg);
+  color: var(--milk);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover,
+.btn:focus {
+  background-color: var(--milk);
+  color: var(--blackBg);
+}
+.delete {
+  border-color: var(--red);
+  background-color: var(--red);
+  /* color: var(--red); */
+}
+.delete:hover,
+.delete:focus {
+  background-color: var(--orange);
+  color: var(--milk);
+}
+.logoContainer {
+  margin: 0 auto 5em;
+}

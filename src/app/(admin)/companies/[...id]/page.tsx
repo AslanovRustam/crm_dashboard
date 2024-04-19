@@ -43,10 +43,6 @@ const Company = ({ params }: ICompanyProps) => {
     toast.success(`the new promo ${data.name},has been added`);
     dispatch(addPromoToCompany([currentCompany!.id, data]));
   };
-  // const updateCompanyInfo = (data: IPromo) => {
-  //   toast.success(`Info ${data.name},has been updated`);
-  //   dispatch(addPromoToCompany([currentCompany!.id, data]));
-  // };
 
   const modalContentMap = {
     updateCompany: (
