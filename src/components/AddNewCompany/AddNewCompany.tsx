@@ -98,7 +98,9 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose, currentCompany }) => {
       // return makeCorrectRequest;
     },
   });
-
+  const title = currentCompany
+    ? "Update <br /> the <br /> company"
+    : "Add <br /> new <br /> company";
   return (
     <div className={s.container}>
       <form className={s.form}>
@@ -107,11 +109,10 @@ const AddCompany: FC<AddCompanyProps> = ({ onClose, currentCompany }) => {
         </span>
 
         <div className={s.leftSide}>
-          <p className={s.title}>
-            Add <br />
-            new <br />
-            company
-          </p>
+          <p
+            className={s.title}
+            dangerouslySetInnerHTML={{ __html: title }}
+          ></p>
           <div className={s.innerSection}>
             <label className={s.label}>
               <span className={s.name}>Status</span>
